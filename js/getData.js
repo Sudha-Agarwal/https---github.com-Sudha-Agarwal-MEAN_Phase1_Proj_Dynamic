@@ -8,7 +8,7 @@ function getBlogData(){
             resolve(apiResult);
         }
         else{
-            reject("No data found");
+            reject("No data found!!");
         }
     });
 
@@ -41,7 +41,7 @@ function showCard(apiResult){
         main.innerHTML = output;
 
 }
-getBlogData().then(showCard).catch(error => { 
+getBlogData().then(showCard).catch(function(error) { 
     const main = document.getElementById('main');   
     let output = '';
     output += `
@@ -52,6 +52,27 @@ getBlogData().then(showCard).catch(error => {
 
 });
 
+let user = "Sudha";
+console.log("Welcome " + user);
+
+console.log(`Welcome ${user}`);
 
 
+var obj = {name:'sudha'};
+
+obj.name; //sudha
+obj['name']; //sudha
+
+
+var x = 10;
+
+x = x + 20;
+//or
+x += 20;
+
+var str = "Hello";
+
+str = str + "World"; //Hello World
+
+str += "World"
 
